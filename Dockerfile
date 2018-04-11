@@ -1,4 +1,4 @@
-FROM ruby:2.4-alpine3.7
+FROM ruby:2.4-alpine3.6
 MAINTAINER William Le (w.le@acaprojects.com)
 
 RUN apk update && \
