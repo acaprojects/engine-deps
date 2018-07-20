@@ -1,4 +1,4 @@
-FROM ruby:2.4-alpine3.6
+FROM jruby:9-jdk-alpine
 MAINTAINER William Le (w.le@acaprojects.com)
 
 RUN apk update && \
