@@ -1,8 +1,8 @@
-FROM ruby:2.4-alpine3.6
+FROM ruby:2.5-alpine3.12
 MAINTAINER William Le (w.le@acaprojects.com)
 
 RUN apk update && \
-    apk add bash tzdata curl nano git openssl-dev tcpdump   g++ make python  cmake libev-dev libuv-dev libxml2
+    apk add bash tzdata curl nano git openssl-dev tcpdump   g++ make python2  cmake libev-dev libuv-dev libxml2
 
 # Disable root login and Switch to newer repo for openssh and perl, to resolve CVE-2018-15473 and CVE-2005-3962
 RUN sed -i 's/root::/root:!/g' /etc/shadow && \
