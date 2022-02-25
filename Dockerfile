@@ -1,4 +1,4 @@
-FROM ruby:2.4-alpine3.6
+FROM ruby:2.7-alpine3.6
 MAINTAINER William Le (w.le@acaprojects.com)
 
 RUN apk update && \
@@ -9,4 +9,4 @@ RUN sed -i 's/root::/root:!/g' /etc/shadow && \
     sed -i 's/3.6/3.11/g' /etc/apk/repositories
 RUN apk update && apk add openssh perl
 
-RUN gem install sprockets -v 3.7.2 && gem install rails -v '~> 5.2.4.1' && gem install libcouchbase bundler
+RUN gem install sprockets -v 3.7.2 && gem install rails -v '~> 5.2.6.2' && gem install libcouchbase bundler
